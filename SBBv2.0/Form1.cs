@@ -33,10 +33,6 @@ namespace SBBv2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.gridView.SelectedRows)
-            {
-                gridView.Rows.RemoveAt(item.Index);
-            }
             Transport tp = new Transport();
             Connections connections = tp.GetConnections(txtVon.Text, txtNach.Text);
             foreach (Connection connection in connections.ConnectionList)
@@ -45,10 +41,14 @@ namespace SBBv2._0
                 row.CreateCells(gridView);
                 row.Cells[0].Value = connection.From.Station.Name;
                 row.Cells[1].Value = connection.To.Station.Name;
-                row.Cells[2].Value = connection.Duration;
-                row.Cells[3].Value = connection.From.Departure;
-                row.Cells[4].Value = connection.To.Arrival;
+                String endDauer = connection.Duration.Remove(0, 3);
+                row.Cells[2].Value = Convert.ToDateTime(endDauer).ToString("HH:mm:ss");
+                row.Cells[3].Value = Convert.ToDateTime(connection.From.Departure).ToString("HH:mm");
+                row.Cells[4].Value = Convert.ToDateTime(connection.To.Arrival).ToString("HH:mm");
                 row.Cells[5].Value = connection.From.Platform;
+
+        
+
                 gridView.Rows.Add(row);
             }
         }

@@ -48,6 +48,7 @@
             this.Abfahrt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunft = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,11 +230,21 @@
             this.Gleis.HeaderText = "Gleis";
             this.Gleis.Name = "Gleis";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(714, 98);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(397, 217);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 748);
+            this.ClientSize = new System.Drawing.Size(1178, 748);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.radioAbfahrt);
@@ -279,6 +290,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunft;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
