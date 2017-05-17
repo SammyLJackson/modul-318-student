@@ -33,6 +33,7 @@ namespace SBBv2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //GridView wird geleert
             gridView.Rows.Clear();
             gridView.Refresh();
             Transport tp = new Transport();
@@ -50,6 +51,29 @@ namespace SBBv2._0
                 row.Cells[5].Value = connection.From.Platform;
 
                 gridView.Rows.Add(row);
+            }
+        }
+
+        private void btnSearchStation_Click(object sender, EventArgs e)
+        {
+            gridView.Rows.Clear();
+            gridView.Refresh();
+            Transport tp = new Transport();
+            Stations stations = tp.GetStations(txtVonStation.Text);
+            foreach(Station station in stations.StationList)
+            {
+                String id = station.Id;
+                StationBoardRoot stationBoardRoot = tp.GetStationBoard(txtVonStation.Text, id);
+                foreach(StationBoard stBoard in stationBoardRoot.Entries)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(gridView);
+                    row.Cells[0].Value = stBoard.Name;
+                    row.Cells[1].Value = stBoard.To;
+                    row.Cells[3].Value = stBoard.Stop.Departure.ToString("HH:mm:ss");
+
+                    gridView.Rows.Add(row);
+                }
             }
         }
     }
