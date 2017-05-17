@@ -49,7 +49,10 @@
             this.Ankunft = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -186,7 +189,7 @@
             this.gridView.Location = new System.Drawing.Point(67, 360);
             this.gridView.Name = "gridView";
             this.gridView.RowTemplate.Height = 24;
-            this.gridView.Size = new System.Drawing.Size(908, 332);
+            this.gridView.Size = new System.Drawing.Size(644, 332);
             this.gridView.TabIndex = 27;
             // 
             // Von
@@ -232,12 +235,30 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(714, 98);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(715, 154);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(397, 217);
+            this.groupBox1.Size = new System.Drawing.Size(397, 170);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Verbindungen von bestimmter Station aus";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(347, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(147, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 41);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -263,6 +284,8 @@
             this.Text = "SBB v2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +314,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunft;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

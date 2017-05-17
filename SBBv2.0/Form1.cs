@@ -33,6 +33,8 @@ namespace SBBv2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
+            gridView.Rows.Clear();
+            gridView.Refresh();
             Transport tp = new Transport();
             Connections connections = tp.GetConnections(txtVon.Text, txtNach.Text);
             foreach (Connection connection in connections.ConnectionList)
@@ -46,8 +48,6 @@ namespace SBBv2._0
                 row.Cells[3].Value = Convert.ToDateTime(connection.From.Departure).ToString("HH:mm");
                 row.Cells[4].Value = Convert.ToDateTime(connection.To.Arrival).ToString("HH:mm");
                 row.Cells[5].Value = connection.From.Platform;
-
-        
 
                 gridView.Rows.Add(row);
             }
