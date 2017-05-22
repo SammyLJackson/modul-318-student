@@ -37,8 +37,12 @@ namespace SBBv2._0
             //GridView wird geleert
             gridView.Rows.Clear();
             gridView.Refresh();
+
+            //Neue Verbindung wird gesucht u
             Transport tp = new Transport();
-            Connections connections = tp.GetConnections(cmbVon.Text, cmbNach.Text);
+            string date = dateTimePickerDatum.Value.ToString("yyyy-MM-dd");
+            string time = dateTimePickerUhrzeit.Value.ToString("HH:mm");
+            Connections connections = tp.GetConnectionsDetailed(cmbVon.Text, cmbNach.Text, date, time);
             foreach (Connection connection in connections.ConnectionList)
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -109,9 +113,9 @@ namespace SBBv2._0
                     cmbBox.Items.Add(station.Name);
                 }
             }
-            catch (WebException fehlerObjekt)
+            catch (WebException fehler)
             {
-                MessageBox.Show("Sie haben zu viele Serveranfragen auf einmal gestellt.\nBitte versuchen Sie es erneut!\n\n" + fehlerObjekt.Message, "Zu viele Anfragen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Sie haben zu viele Serveranfragen auf einmal gestellt.\nBitte versuchen Sie es erneut!\n\n" + fehler.Message, "Zu viele Anfragen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

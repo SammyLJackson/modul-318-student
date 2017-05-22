@@ -47,11 +47,11 @@
             this.btnSwitch = new System.Windows.Forms.Button();
             this.dateTimePickerDatum = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerUhrzeit = new System.Windows.Forms.DateTimePicker();
-            this.radioAnkunft = new System.Windows.Forms.RadioButton();
-            this.radioAbfahrt = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbVon = new System.Windows.Forms.ComboBox();
             this.cmbNach = new System.Windows.Forms.ComboBox();
+            this.btnMapsVon = new System.Windows.Forms.Button();
+            this.btnMapsNach = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,11 +77,11 @@
             this.Abfahrt,
             this.Ankunft,
             this.Gleis});
-            this.gridView.Location = new System.Drawing.Point(292, 370);
+            this.gridView.Location = new System.Drawing.Point(329, 356);
             this.gridView.Name = "gridView";
             this.gridView.RowHeadersVisible = false;
             this.gridView.RowTemplate.Height = 24;
-            this.gridView.Size = new System.Drawing.Size(580, 332);
+            this.gridView.Size = new System.Drawing.Size(604, 329);
             this.gridView.TabIndex = 27;
             // 
             // Von
@@ -156,7 +156,7 @@
             // lblVon
             // 
             this.lblVon.AutoSize = true;
-            this.lblVon.Location = new System.Drawing.Point(55, 137);
+            this.lblVon.Location = new System.Drawing.Point(104, 137);
             this.lblVon.Name = "lblVon";
             this.lblVon.Size = new System.Drawing.Size(33, 17);
             this.lblVon.TabIndex = 15;
@@ -165,7 +165,7 @@
             // lblNach
             // 
             this.lblNach.AutoSize = true;
-            this.lblNach.Location = new System.Drawing.Point(422, 137);
+            this.lblNach.Location = new System.Drawing.Point(388, 137);
             this.lblNach.Name = "lblNach";
             this.lblNach.Size = new System.Drawing.Size(41, 17);
             this.lblNach.TabIndex = 16;
@@ -174,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 246);
+            this.label4.Location = new System.Drawing.Point(94, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 17;
@@ -183,7 +183,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 246);
+            this.label5.Location = new System.Drawing.Point(315, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 18;
@@ -192,10 +192,10 @@
             // btnSwitch
             // 
             this.btnSwitch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwitch.BackgroundImage")));
-            this.btnSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSwitch.Location = new System.Drawing.Point(329, 157);
             this.btnSwitch.Name = "btnSwitch";
-            this.btnSwitch.Size = new System.Drawing.Size(41, 43);
+            this.btnSwitch.Size = new System.Drawing.Size(39, 43);
             this.btnSwitch.TabIndex = 19;
             this.btnSwitch.UseVisualStyleBackColor = true;
             this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
@@ -203,7 +203,7 @@
             // dateTimePickerDatum
             // 
             this.dateTimePickerDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDatum.Location = new System.Drawing.Point(58, 279);
+            this.dateTimePickerDatum.Location = new System.Drawing.Point(97, 261);
             this.dateTimePickerDatum.Name = "dateTimePickerDatum";
             this.dateTimePickerDatum.Size = new System.Drawing.Size(145, 22);
             this.dateTimePickerDatum.TabIndex = 22;
@@ -211,40 +211,17 @@
             // 
             // dateTimePickerUhrzeit
             // 
-            this.dateTimePickerUhrzeit.CustomFormat = "HH:mm tt";
+            this.dateTimePickerUhrzeit.CustomFormat = "HH:mm";
             this.dateTimePickerUhrzeit.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerUhrzeit.Location = new System.Drawing.Point(247, 279);
+            this.dateTimePickerUhrzeit.Location = new System.Drawing.Point(318, 261);
             this.dateTimePickerUhrzeit.Name = "dateTimePickerUhrzeit";
             this.dateTimePickerUhrzeit.ShowUpDown = true;
             this.dateTimePickerUhrzeit.Size = new System.Drawing.Size(145, 22);
             this.dateTimePickerUhrzeit.TabIndex = 23;
             // 
-            // radioAnkunft
-            // 
-            this.radioAnkunft.AutoSize = true;
-            this.radioAnkunft.Location = new System.Drawing.Point(425, 284);
-            this.radioAnkunft.Name = "radioAnkunft";
-            this.radioAnkunft.Size = new System.Drawing.Size(77, 21);
-            this.radioAnkunft.TabIndex = 24;
-            this.radioAnkunft.TabStop = true;
-            this.radioAnkunft.Text = "Ankunft";
-            this.radioAnkunft.UseVisualStyleBackColor = true;
-            // 
-            // radioAbfahrt
-            // 
-            this.radioAbfahrt.AutoSize = true;
-            this.radioAbfahrt.Checked = true;
-            this.radioAbfahrt.Location = new System.Drawing.Point(425, 246);
-            this.radioAbfahrt.Name = "radioAbfahrt";
-            this.radioAbfahrt.Size = new System.Drawing.Size(75, 21);
-            this.radioAbfahrt.TabIndex = 25;
-            this.radioAbfahrt.TabStop = true;
-            this.radioAbfahrt.Text = "Abfahrt";
-            this.radioAbfahrt.UseVisualStyleBackColor = true;
-            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(531, 244);
+            this.btnSearch.Location = new System.Drawing.Point(545, 266);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 61);
             this.btnSearch.TabIndex = 26;
@@ -255,7 +232,7 @@
             // cmbVon
             // 
             this.cmbVon.FormattingEnabled = true;
-            this.cmbVon.Location = new System.Drawing.Point(48, 165);
+            this.cmbVon.Location = new System.Drawing.Point(97, 165);
             this.cmbVon.Name = "cmbVon";
             this.cmbVon.Size = new System.Drawing.Size(213, 24);
             this.cmbVon.TabIndex = 29;
@@ -264,24 +241,42 @@
             // cmbNach
             // 
             this.cmbNach.FormattingEnabled = true;
-            this.cmbNach.Location = new System.Drawing.Point(425, 165);
+            this.cmbNach.Location = new System.Drawing.Point(391, 165);
             this.cmbNach.Name = "cmbNach";
             this.cmbNach.Size = new System.Drawing.Size(213, 24);
             this.cmbNach.TabIndex = 30;
             this.cmbNach.DropDown += new System.EventHandler(this.cmbNach_DropDown);
+            // 
+            // btnMapsVon
+            // 
+            this.btnMapsVon.Image = ((System.Drawing.Image)(resources.GetObject("btnMapsVon.Image")));
+            this.btnMapsVon.Location = new System.Drawing.Point(49, 159);
+            this.btnMapsVon.Name = "btnMapsVon";
+            this.btnMapsVon.Size = new System.Drawing.Size(42, 39);
+            this.btnMapsVon.TabIndex = 31;
+            this.btnMapsVon.UseVisualStyleBackColor = true;
+            // 
+            // btnMapsNach
+            // 
+            this.btnMapsNach.Image = ((System.Drawing.Image)(resources.GetObject("btnMapsNach.Image")));
+            this.btnMapsNach.Location = new System.Drawing.Point(610, 159);
+            this.btnMapsNach.Name = "btnMapsNach";
+            this.btnMapsNach.Size = new System.Drawing.Size(42, 39);
+            this.btnMapsNach.TabIndex = 32;
+            this.btnMapsNach.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 748);
+            this.Controls.Add(this.btnMapsNach);
+            this.Controls.Add(this.btnMapsVon);
             this.Controls.Add(this.cmbNach);
             this.Controls.Add(this.cmbVon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.radioAbfahrt);
-            this.Controls.Add(this.radioAnkunft);
             this.Controls.Add(this.dateTimePickerUhrzeit);
             this.Controls.Add(this.dateTimePickerDatum);
             this.Controls.Add(this.btnSwitch);
@@ -320,11 +315,11 @@
         private System.Windows.Forms.Button btnSwitch;
         private System.Windows.Forms.DateTimePicker dateTimePickerDatum;
         private System.Windows.Forms.DateTimePicker dateTimePickerUhrzeit;
-        private System.Windows.Forms.RadioButton radioAnkunft;
-        private System.Windows.Forms.RadioButton radioAbfahrt;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbVon;
         private System.Windows.Forms.ComboBox cmbNach;
+        private System.Windows.Forms.Button btnMapsVon;
+        private System.Windows.Forms.Button btnMapsNach;
     }
 }
 
