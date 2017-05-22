@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwissTransport;
 using System.Net;
+using System.Diagnostics;
 
 namespace SBBv2._0
 {
@@ -116,6 +117,36 @@ namespace SBBv2._0
             catch (WebException fehler)
             {
                 MessageBox.Show("Sie haben zu viele Serveranfragen auf einmal gestellt.\nBitte versuchen Sie es erneut!\n\n" + fehler.Message, "Zu viele Anfragen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnMapsVon_Click(object sender, EventArgs e)
+        {
+            if(cmbVon.Text != null || cmbVon.Text != "")
+            {
+                browserOeffnen(cmbVon);
+            }
+        }
+
+        private void btnMapsNach_Click(object sender, EventArgs e)
+        {
+            if (cmbNach.Text != null || cmbNach.Text != "")
+            {
+                browserOeffnen(cmbNach);
+            }
+        }
+
+        private void browserOeffnen(ComboBox cmbBox)
+        { 
+            Transport tp = new Transport();
+            Stations stationVon = tp.GetStations(cmbBox.Text);
+            foreach (Station station in stationVon.StationList)
+            {
+                Coordinate cordinates = station.Coordinate;
+                string xValue = cordinates.XCoordinate.ToString().Replace(",", ".");
+                string yValue = cordinates.YCoordinate.ToString().Replace(",", ".");
+                string url = "https://www.google.ch/maps/?q=loc:" + xValue + "+" + yValue;
+                Process.Start(url);
             }
         }
     }

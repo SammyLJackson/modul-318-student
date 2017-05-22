@@ -255,6 +255,7 @@
             this.btnMapsVon.Size = new System.Drawing.Size(42, 39);
             this.btnMapsVon.TabIndex = 31;
             this.btnMapsVon.UseVisualStyleBackColor = true;
+            this.btnMapsVon.Click += new System.EventHandler(this.btnMapsVon_Click);
             // 
             // btnMapsNach
             // 
@@ -264,6 +265,7 @@
             this.btnMapsNach.Size = new System.Drawing.Size(42, 39);
             this.btnMapsNach.TabIndex = 32;
             this.btnMapsNach.UseVisualStyleBackColor = true;
+            this.btnMapsNach.Click += new System.EventHandler(this.btnMapsNach_Click);
             // 
             // Form1
             // 
