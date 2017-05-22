@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblTitel = new System.Windows.Forms.Label();
             this.gridView = new System.Windows.Forms.DataGridView();
             this.Von = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,20 +38,20 @@
             this.Ankunft = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtVonStation = new System.Windows.Forms.TextBox();
             this.btnSearchStation = new System.Windows.Forms.Button();
+            this.txtVonStation = new System.Windows.Forms.TextBox();
             this.lblVon = new System.Windows.Forms.Label();
             this.lblNach = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSwitch = new System.Windows.Forms.Button();
-            this.txtVon = new System.Windows.Forms.TextBox();
-            this.txtNach = new System.Windows.Forms.TextBox();
             this.dateTimePickerDatum = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerUhrzeit = new System.Windows.Forms.DateTimePicker();
             this.radioAnkunft = new System.Windows.Forms.RadioButton();
             this.radioAbfahrt = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbVon = new System.Windows.Forms.ComboBox();
+            this.cmbNach = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -135,13 +136,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Abfahrtstafel von Station anzeigen";
             // 
-            // txtVonStation
-            // 
-            this.txtVonStation.Location = new System.Drawing.Point(47, 35);
-            this.txtVonStation.Name = "txtVonStation";
-            this.txtVonStation.Size = new System.Drawing.Size(347, 22);
-            this.txtVonStation.TabIndex = 0;
-            // 
             // btnSearchStation
             // 
             this.btnSearchStation.Location = new System.Drawing.Point(152, 104);
@@ -151,6 +145,13 @@
             this.btnSearchStation.Text = "Search Station";
             this.btnSearchStation.UseVisualStyleBackColor = true;
             this.btnSearchStation.Click += new System.EventHandler(this.btnSearchStation_Click);
+            // 
+            // txtVonStation
+            // 
+            this.txtVonStation.Location = new System.Drawing.Point(47, 35);
+            this.txtVonStation.Name = "txtVonStation";
+            this.txtVonStation.Size = new System.Drawing.Size(347, 22);
+            this.txtVonStation.TabIndex = 0;
             // 
             // lblVon
             // 
@@ -190,27 +191,14 @@
             // 
             // btnSwitch
             // 
-            this.btnSwitch.Location = new System.Drawing.Point(317, 156);
+            this.btnSwitch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSwitch.BackgroundImage")));
+            this.btnSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSwitch.Location = new System.Drawing.Point(329, 157);
             this.btnSwitch.Name = "btnSwitch";
-            this.btnSwitch.Size = new System.Drawing.Size(65, 41);
+            this.btnSwitch.Size = new System.Drawing.Size(41, 43);
             this.btnSwitch.TabIndex = 19;
-            this.btnSwitch.Text = "<->";
             this.btnSwitch.UseVisualStyleBackColor = true;
             this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
-            // 
-            // txtVon
-            // 
-            this.txtVon.Location = new System.Drawing.Point(58, 165);
-            this.txtVon.Name = "txtVon";
-            this.txtVon.Size = new System.Drawing.Size(213, 22);
-            this.txtVon.TabIndex = 20;
-            // 
-            // txtNach
-            // 
-            this.txtNach.Location = new System.Drawing.Point(425, 165);
-            this.txtNach.Name = "txtNach";
-            this.txtNach.Size = new System.Drawing.Size(213, 22);
-            this.txtNach.TabIndex = 21;
             // 
             // dateTimePickerDatum
             // 
@@ -245,6 +233,7 @@
             // radioAbfahrt
             // 
             this.radioAbfahrt.AutoSize = true;
+            this.radioAbfahrt.Checked = true;
             this.radioAbfahrt.Location = new System.Drawing.Point(425, 246);
             this.radioAbfahrt.Name = "radioAbfahrt";
             this.radioAbfahrt.Size = new System.Drawing.Size(75, 21);
@@ -263,11 +252,31 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button2_Click);
             // 
+            // cmbVon
+            // 
+            this.cmbVon.FormattingEnabled = true;
+            this.cmbVon.Location = new System.Drawing.Point(48, 165);
+            this.cmbVon.Name = "cmbVon";
+            this.cmbVon.Size = new System.Drawing.Size(213, 24);
+            this.cmbVon.TabIndex = 29;
+            this.cmbVon.DropDown += new System.EventHandler(this.cmbVon_DropDown);
+            // 
+            // cmbNach
+            // 
+            this.cmbNach.FormattingEnabled = true;
+            this.cmbNach.Location = new System.Drawing.Point(425, 165);
+            this.cmbNach.Name = "cmbNach";
+            this.cmbNach.Size = new System.Drawing.Size(213, 24);
+            this.cmbNach.TabIndex = 30;
+            this.cmbNach.DropDown += new System.EventHandler(this.cmbNach_DropDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 748);
+            this.Controls.Add(this.cmbNach);
+            this.Controls.Add(this.cmbVon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btnSearch);
@@ -275,8 +284,6 @@
             this.Controls.Add(this.radioAnkunft);
             this.Controls.Add(this.dateTimePickerUhrzeit);
             this.Controls.Add(this.dateTimePickerDatum);
-            this.Controls.Add(this.txtNach);
-            this.Controls.Add(this.txtVon);
             this.Controls.Add(this.btnSwitch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -311,13 +318,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSwitch;
-        private System.Windows.Forms.TextBox txtVon;
-        private System.Windows.Forms.TextBox txtNach;
         private System.Windows.Forms.DateTimePicker dateTimePickerDatum;
         private System.Windows.Forms.DateTimePicker dateTimePickerUhrzeit;
         private System.Windows.Forms.RadioButton radioAnkunft;
         private System.Windows.Forms.RadioButton radioAbfahrt;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmbVon;
+        private System.Windows.Forms.ComboBox cmbNach;
     }
 }
 

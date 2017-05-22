@@ -135,4 +135,16 @@
   <metadata name="Gleis.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSwitch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB8AAAAjCAYAAABsFtHvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        dAAAEnQB3mYfeAAAATJJREFUWEftlq2ug0AQRu/TYsFiwWLBgsXCM6B5BzQWPc0hJWlu2WF2gWB6kg1B
+        bM83sz/0Tx7kJ3+En/wSlmWRtm3Xp4VL5dM0SRzHkue5KcDlbfcJcMuaWwOo8nmeZRgG6brOe5RlKVEU
+        qQGc8nEc1/RpmkpRFN4jy7IwORUzkapDQIY8qO11XUvTNO83P6xi2JXTtr7v3292fMTglIdUjpCuWcSw
+        K2etz6y5lV05UAEBQnY7cy3BnXLguPFDewJtEJjgzNVQ5WewLN2h3HcTfbJ1zYUqR+hzdP7DNRskPysG
+        KteO7K78CvG25lzVLr7km5iJPD93sXWw2/kocVo0VHlVVV+fSsugaq3iDbXtSZKsfwzu4nDD3RnAKYe7
+        A6hyIEDoJXPEofxOfvJHeFAu8gJ5+hjw839wjQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
