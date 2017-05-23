@@ -35,7 +35,6 @@ namespace SwissTransport
                     JsonConvert.DeserializeObject<StationBoardRoot>(readToEnd);
                 return stationboard;
             }
-
             return null;
         }
 

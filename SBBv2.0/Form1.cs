@@ -69,11 +69,11 @@ namespace SBBv2._0
             //Neue Suche wird gestartet
             Transport tp = new Transport();
             Stations stations = tp.GetStations(txtVonStation.Text);
-            foreach(Station station in stations.StationList)
+            foreach (Station station in stations.StationList)
             {
                 String id = station.Id;
                 StationBoardRoot stBoardRoot = tp.GetStationBoard(txtVonStation.Text, id);
-                foreach(StationBoard stBoard in stBoardRoot.Entries)
+                foreach (StationBoard stBoard in stBoardRoot.Entries)
                 {
                     DataGridViewRow row = new DataGridViewRow();
                     row.CreateCells(gridView);
@@ -86,7 +86,7 @@ namespace SBBv2._0
             }
         }
 
-        private void cmbVon_DropDown(object sender, EventArgs e)
+    private void cmbVon_DropDown(object sender, EventArgs e)
         {
             dropDownFuellen(cmbVon);
         }

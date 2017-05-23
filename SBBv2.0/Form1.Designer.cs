@@ -68,6 +68,9 @@
             // 
             // gridView
             // 
+            this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,12 +80,13 @@
             this.Abfahrt,
             this.Ankunft,
             this.Gleis});
-            this.gridView.Location = new System.Drawing.Point(329, 356);
+            this.gridView.Location = new System.Drawing.Point(286, 366);
             this.gridView.Name = "gridView";
             this.gridView.RowHeadersVisible = false;
             this.gridView.RowTemplate.Height = 24;
             this.gridView.Size = new System.Drawing.Size(604, 329);
             this.gridView.TabIndex = 27;
+            this.gridView.TabStop = false;
             // 
             // Von
             // 
@@ -134,24 +138,29 @@
             this.groupBox1.Size = new System.Drawing.Size(431, 208);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Abfahrtstafel von Station anzeigen";
+            this.groupBox1.Text = "Abfahrtstafel von einer Station anzeigen";
             // 
             // btnSearchStation
             // 
+            this.btnSearchStation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchStation.Location = new System.Drawing.Point(152, 104);
             this.btnSearchStation.Name = "btnSearchStation";
             this.btnSearchStation.Size = new System.Drawing.Size(136, 41);
-            this.btnSearchStation.TabIndex = 1;
+            this.btnSearchStation.TabIndex = 9;
             this.btnSearchStation.Text = "Search Station";
             this.btnSearchStation.UseVisualStyleBackColor = true;
             this.btnSearchStation.Click += new System.EventHandler(this.btnSearchStation_Click);
             // 
             // txtVonStation
             // 
+            this.txtVonStation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVonStation.Location = new System.Drawing.Point(47, 35);
             this.txtVonStation.Name = "txtVonStation";
             this.txtVonStation.Size = new System.Drawing.Size(347, 22);
-            this.txtVonStation.TabIndex = 0;
+            this.txtVonStation.TabIndex = 8;
             // 
             // lblVon
             // 
@@ -196,7 +205,7 @@
             this.btnSwitch.Location = new System.Drawing.Point(329, 157);
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.Size = new System.Drawing.Size(39, 43);
-            this.btnSwitch.TabIndex = 19;
+            this.btnSwitch.TabIndex = 6;
             this.btnSwitch.UseVisualStyleBackColor = true;
             this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
             // 
@@ -206,7 +215,7 @@
             this.dateTimePickerDatum.Location = new System.Drawing.Point(97, 261);
             this.dateTimePickerDatum.Name = "dateTimePickerDatum";
             this.dateTimePickerDatum.Size = new System.Drawing.Size(145, 22);
-            this.dateTimePickerDatum.TabIndex = 22;
+            this.dateTimePickerDatum.TabIndex = 2;
             this.dateTimePickerDatum.Value = new System.DateTime(2017, 5, 17, 10, 18, 52, 0);
             // 
             // dateTimePickerUhrzeit
@@ -217,14 +226,14 @@
             this.dateTimePickerUhrzeit.Name = "dateTimePickerUhrzeit";
             this.dateTimePickerUhrzeit.ShowUpDown = true;
             this.dateTimePickerUhrzeit.Size = new System.Drawing.Size(145, 22);
-            this.dateTimePickerUhrzeit.TabIndex = 23;
+            this.dateTimePickerUhrzeit.TabIndex = 3;
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(545, 266);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 61);
-            this.btnSearch.TabIndex = 26;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button2_Click);
@@ -235,7 +244,7 @@
             this.cmbVon.Location = new System.Drawing.Point(97, 165);
             this.cmbVon.Name = "cmbVon";
             this.cmbVon.Size = new System.Drawing.Size(213, 24);
-            this.cmbVon.TabIndex = 29;
+            this.cmbVon.TabIndex = 0;
             this.cmbVon.DropDown += new System.EventHandler(this.cmbVon_DropDown);
             // 
             // cmbNach
@@ -244,7 +253,7 @@
             this.cmbNach.Location = new System.Drawing.Point(391, 165);
             this.cmbNach.Name = "cmbNach";
             this.cmbNach.Size = new System.Drawing.Size(213, 24);
-            this.cmbNach.TabIndex = 30;
+            this.cmbNach.TabIndex = 1;
             this.cmbNach.DropDown += new System.EventHandler(this.cmbNach_DropDown);
             // 
             // btnMapsVon
@@ -253,7 +262,7 @@
             this.btnMapsVon.Location = new System.Drawing.Point(49, 159);
             this.btnMapsVon.Name = "btnMapsVon";
             this.btnMapsVon.Size = new System.Drawing.Size(42, 39);
-            this.btnMapsVon.TabIndex = 31;
+            this.btnMapsVon.TabIndex = 5;
             this.btnMapsVon.UseVisualStyleBackColor = true;
             this.btnMapsVon.Click += new System.EventHandler(this.btnMapsVon_Click);
             // 
@@ -263,12 +272,13 @@
             this.btnMapsNach.Location = new System.Drawing.Point(610, 159);
             this.btnMapsNach.Name = "btnMapsNach";
             this.btnMapsNach.Size = new System.Drawing.Size(42, 39);
-            this.btnMapsNach.TabIndex = 32;
+            this.btnMapsNach.TabIndex = 7;
             this.btnMapsNach.UseVisualStyleBackColor = true;
             this.btnMapsNach.Click += new System.EventHandler(this.btnMapsNach_Click);
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 748);
@@ -288,6 +298,7 @@
             this.Controls.Add(this.lblVon);
             this.Controls.Add(this.lblTitel);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SBB v2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
