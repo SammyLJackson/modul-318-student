@@ -18,7 +18,6 @@ namespace SwissTransport
                 var stations = JsonConvert.DeserializeObject<Stations>(message);
                 return stations;
             }
-
             return null;
         }
 
@@ -80,7 +79,7 @@ namespace SwissTransport
 
             webProxy.Credentials = CredentialCache.DefaultNetworkCredentials;
             request.Proxy = webProxy;
-            
+
             return request;
         }
     }
